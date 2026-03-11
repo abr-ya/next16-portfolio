@@ -1,0 +1,9 @@
+export { Hero } from "./sections/hero";
+export { About } from "./sections/about";
+export { Experience } from "./sections/experience";
+export { Skills } from "./sections/skills";
+export { Reviews } from "./sections/reviews";
+export { Projects } from "./sections/projects";
+export { PricingPlans } from "./sections/pricing-plans";
+export { Contact } from "./sections/contact";
+export { Questions } from "./sections/questions";
