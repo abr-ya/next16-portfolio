@@ -13,7 +13,6 @@ const Home = () => {
           const intersecting = entry.isIntersecting;
           if (intersecting) {
             const currentSection = entry.target.id;
-            console.log(currentSection);
             window.location.hash = currentSection;
           }
         });
@@ -25,6 +24,14 @@ const Home = () => {
     compsArr.forEach((comp) => {
       observer.observe(comp);
     });
+
+    // Cleanup: отключаем Observer при размонтировании
+    return () => {
+      compsArr.forEach((comp) => {
+        observer.unobserve(comp);
+      });
+      observer.disconnect();
+    };
   }, []);
 
   return (
