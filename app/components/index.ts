@@ -1,3 +1,4 @@
+export { HashObserver } from "./hash-observer";
 export { Hero } from "./sections/hero";
 export { About } from "./sections/about";
 export { Experience } from "./sections/experience";
