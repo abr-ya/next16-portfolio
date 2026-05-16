@@ -97,8 +97,8 @@ export const Hero = () => {
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.7 }}
-          href="#"
-          className="mx-auto mt-7 block w-max rounded-lg bg-red-400 px-3 py-1 font-light capitalize tracking-wider text-white hover:bg-red-500 transition-colors"
+          href="https://t.me/abr_ya"
+          className="mx-auto mt-7 block w-max rounded-lg bg-[#229ED9] px-3 py-1 font-light capitalize tracking-wider text-white hover:bg-[#1d8ec2] transition-colors"
           onMouseEnter={() => setButtonHover(true)}
           onMouseLeave={() => setButtonHover(false)}
         >
