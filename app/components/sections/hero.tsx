@@ -59,7 +59,7 @@ export const Hero = () => {
               width={400}
               height={400}
               priority={true}
-              className="h-auto w-52"
+              className="h-auto w-52 [clip-path:inset(0_0_0_16px)]"
             />
             <motion.span
               className="absolute text-3xl font-semibold text-white"
