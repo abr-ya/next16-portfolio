@@ -1,8 +1,9 @@
 "use client";
+
 import Image from "next/image";
 import { useMotionValue, useTransform, motion, useSpring } from "framer-motion";
 import { useState } from "react";
-import { heroIcons } from "./hero-icons";
+import { heroIcons } from "../icons/hero-icons";
 
 export const Hero = () => {
   const [windowOffset, setWindowOffset] = useState({ innerWidth: 0, innerHeight: 0 });

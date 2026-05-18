@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, it, expect } from "vitest";
 import { Hero } from "./hero";
-import { heroIcons } from "./hero-icons";
+import { heroIcons } from "../icons/hero-icons";
 
 describe("Hero", () => {
   it("renders hero section with correct id", () => {
