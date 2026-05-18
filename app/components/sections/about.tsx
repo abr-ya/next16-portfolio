@@ -6,7 +6,7 @@ import { Achievement } from "../blocks/about/achievement";
 
 export const About = () => {
   return (
-    <section id="about" className="h-screen">
+    <section id="about" className="h-screen snap-section">
       <div className="w-full flex items-center justify-between md:justify-center">
         <Image src={"/about.png"} alt="About Image" width={400} height={400} className="w-75 lg:w-[200px]" />
       </div>

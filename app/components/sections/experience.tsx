@@ -22,7 +22,7 @@ export const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="h-screen relative py-20">
+    <section id="experience" className="h-screen relative py-20 snap-section">
       {/* todo: Heading Experience & Education */}
       <Image
         src={"/education.png"}

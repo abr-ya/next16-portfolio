@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useRef, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
+import { SectionNav } from "./navigation/section-nav";
 
 type HashObserverProps = {
   children: ReactNode;
@@ -8,6 +9,7 @@ type HashObserverProps = {
 
 export const HashObserver = ({ children }: HashObserverProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [activeSection, setActiveSection] = useState<string>("hero");
 
   useEffect(() => {
     const container = containerRef.current;
@@ -21,7 +23,9 @@ export const HashObserver = ({ children }: HashObserverProps) => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            window.location.hash = entry.target.id;
+            const sectionId = entry.target.id;
+            window.location.hash = sectionId;
+            setActiveSection(sectionId);
           }
         });
       },
@@ -41,8 +45,11 @@ export const HashObserver = ({ children }: HashObserverProps) => {
   }, []);
 
   return (
-    <div className="w-full" ref={containerRef}>
-      {children}
-    </div>
+    <>
+      <SectionNav activeSection={activeSection} />
+      <div className="w-full snap-container" ref={containerRef}>
+        {children}
+      </div>
+    </>
   );
 };

@@ -35,7 +35,7 @@ export const Hero = () => {
   return (
     <section
       id="hero"
-      className="h-screen grid place-items-center"
+      className="h-screen grid place-items-center snap-section"
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
     >
